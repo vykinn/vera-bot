@@ -1,0 +1,1 @@
+FROM python:3.12-slim\nWORKDIR /app\nCOPY . .\nENV PYTHONUNBUFFERED=1 PORT=8080\nEXPOSE 8080\nCMD ["python", "main.py"]\n
