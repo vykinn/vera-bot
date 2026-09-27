@@ -3,12 +3,7 @@ services:
     name: vera-bot
     runtime: python
     plan: free
-    buildCommand: |
-      set -e
-      cat payload/part*.b64 > /tmp/vera-bot.b64
-      base64 -d /tmp/vera-bot.b64 > /tmp/vera-bot.zip
-      unzip -q /tmp/vera-bot.zip
-      cp -a vera-bot/. .
+    buildCommand: "echo no dependencies"
     startCommand: "python main.py"
     healthCheckPath: /v1/healthz
     envVars:
