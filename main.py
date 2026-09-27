@@ -1,0 +1,1 @@
+"""Start the bot:  python main.py   (PORT env var respected; default 8080)."""\nfrom app.server import serve\n\nif __name__ == "__main__":\n    serve()\n
